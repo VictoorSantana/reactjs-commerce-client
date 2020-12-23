@@ -1,0 +1,24 @@
+// Override default variables before the import
+/*! `Custom` Bootstrap 4 theme */
+@import url(https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap);
+$font-family-base:Hind;
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap);
+$headings-font-family:'Barlow Condensed';
+
+$enable-grid-classes:true;
+$primary:#27a2fc;
+$secondary:#a0b7bc;
+$success:#37bd74;
+$danger:#e8286b;
+$info:#7ebcfa;
+$warning:#ff9b37;
+$light:#eef0f2;
+$dark:#3c4055;
+$body-bg: #f2f2f2;
+$enable-gradients:false;
+$spacer:1.2rem;
+$border-width:1px;
+$btn-border-radius:0;
+
+@import './style.css';
+@import '~bootstrap/scss/bootstrap.scss';

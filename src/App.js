@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-export default App;
+import DashboardRoute from './routes/dashboard/DashboardRoute';
+import ProductFormRoute from './routes/products/product.form.route.jsx';
+import ProductListRoute from './routes/products/product.list.route.jsx';
+
+const Routes = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={(props) => <DashboardRoute  {...props}></DashboardRoute>}></Route>
+
+      <Route exact path="/produtos" component={(props) => <ProductListRoute {...props}></ProductListRoute>}></Route>      
+      <Route exact path="/produtos/:id/form/1" component={(props) => <ProductFormRoute {...props}></ProductFormRoute>}></Route>
+      
+    </Switch>
+  </BrowserRouter>
+);
+
+export default Routes;
